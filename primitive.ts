@@ -139,3 +139,40 @@ const discountAmount = product1.discount ?? 0 ;
 
 
 const sellername = products?.name;
+
+
+// type asseration => ami jani eita string hbe eijonno type assertion
+
+// let userInputL:unknown (input:unknown){
+//     (userInputL as string).toUpperCase()
+// }
+
+// never type
+
+
+// type asseration
+
+let apidata:unknown = "rahim"
+
+let username =(apidata as string).length
+
+
+// interface
+
+interface IProduct {
+    name: string,
+    price: number
+}
+
+const productName:IProduct ={
+    name:"liam",
+    price:230
+}
+
+// generics
+
+function identity<T>(value:T):T{
+    return value
+}
+const medicine = identity("napa")
+console.log("Medicne Type:",typeof medicine)
