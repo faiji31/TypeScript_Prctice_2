@@ -69,14 +69,14 @@ console.log(customername,ph)
 
 // Type Alias
 
-type TProduct = {
-    Pname: string,
-    price: number,
-    address:{
-        city:string,
-        thana:5000
-    }
-}
+// type TProduct = {
+//     Pname: string,
+//     price: number,
+//     address:{
+//         city:string,
+//         thana:5000
+//     }
+// }
 
 const product1:TProduct ={
     Pname:"rice",
@@ -128,3 +128,14 @@ console.log(seller1)
 // ternery operatror
 const stock = 0;
 const ProductStatus = stock >0 ? "Avilable" : "Outof stock";
+
+// nullish
+
+const discountAmount = product1.discount ?? 0 ;  
+// null naki undefined etar upore dicision ney
+
+
+// optional chaianging
+
+
+const sellername = products?.name;
