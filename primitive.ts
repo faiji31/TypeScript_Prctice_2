@@ -88,3 +88,43 @@ const product1:TProduct ={
     
 }
 
+// Union Type
+
+type TPayment ={
+    method: "cash" | "card" | "mobile banking"
+}
+
+
+const payemnt1:TPayment={
+    method:"cash"
+}
+
+console.log(payemnt1)
+
+const payment2: TPayment={
+    method:"mobile banking"
+}
+console.log(payment2)
+
+// Intersection Type 
+
+type TUser ={
+    name:string
+}
+type TSeller = TUser & {
+    sellerName:string
+}
+
+const seller1:TSeller={
+    name:"liam",
+    sellerName:"Rahim"
+}
+console.log(seller1)
+
+
+// ternery,nullish,optional chainging
+
+
+// ternery operatror
+const stock = 0;
+const ProductStatus = stock >0 ? "Avilable" : "Outof stock";
