@@ -175,4 +175,18 @@ function identity<T>(value:T):T{
     return value
 }
 const medicine = identity("napa")
-console.log("Medicne Type:",typeof medicine)
+
+const medicine1 = identity(12)
+console.log("Medicne Type:",typeof medicine1)
+
+// generics with interface
+
+interface apiRes<TLLM>{
+    success:boolean,
+    data:TLLM
+} 
+
+const res:apiRes<TLLM> ={
+    success: true,
+    data: 
+}
