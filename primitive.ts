@@ -186,7 +186,14 @@ interface apiRes<TLLM>{
     data:TLLM
 } 
 
-const res:apiRes<TLLM> ={
+const res:apiRes<string> ={
     success: true,
-    data: 
+    data: "rice"
+}
+
+interface Ipersona {name:string; add: string}
+
+// constartints
+function getname<T extends Ipersona>(param: T){
+    return param?.name
 }
